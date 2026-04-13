@@ -1,54 +1,65 @@
 /* 1. Custom Background Color & Font Family */
 body {
-    background-color: #2b3e50;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #ffffff;
-    margin: 0;
-    padding: 20px;
+    background-color: #f5f5f5;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #222222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 20px;
 }
 
-/* 2. Font Color styling (Specific) */
-h1, h2, h3 {
-    color: #f39c12;
+/* 2. Font Color styling */
+h1 {
+    color: #333333;
+}
+
+h2, h3 {
+    color: #555555;
 }
 
 /* 3. At least three Divs for positioning/styling */
 
-/* Div 1: Header wrapper */
+/* Div 1: Header */
 .header-panel {
-    background-color: #1a252f;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 12px;
     margin-bottom: 20px;
 }
 
-/* Div 2: Main content layout */
+/* Div 2: Main content */
 .content-panel {
-    background-color: #34495e;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 24px;
 }
 
-/* Div 3: Media container (Images, Videos, Tableau) */
+/* Div 3: Media container */
 .media-panel {
-    background-color: #ecf0f1;
-    color: #2c3e50;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
+    margin-top: 10px;
 }
 
-/* 4. Extra definition (Link styling) */
+/* 4. Extra definition - images */
+.media-panel img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* 5. Photo gallery grid */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* 6. Link styling */
 a {
-    color: #1abc9c;
-    text-decoration: none;
-    font-weight: bold;
+    color: #0000EE;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #16a085;
 }
