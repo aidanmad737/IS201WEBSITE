@@ -14,9 +14,9 @@
     <div class="common header">
         <!-- Nav links pushed to the top-right via float: right -->
         <span class="subheader">
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="about.html">About Me</a>
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
         </span>
         <!-- Profile photo — replace profile.jpg with your actual image file -->
         <img
@@ -32,60 +32,82 @@
          On-page anchor links that jump to sections in the main body.
     ===================== -->
     <div class="common left-menu">
-        <a href="#education">Education</a>
+        <h3>Jump To</h3>
+        <a href="#about">About Me</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
     </div>
 
     <!-- =====================
          MAIN BODY
-         Mission statement at top, then numbered sections for
-         Education, Experience, and Skills.
+         All content stacked into one continuous scrolling page.
     ===================== -->
     <div class="common main-body">
         <a id="top"></a>
 
-        <!-- Mission Statement -->
+        <h2 id="about">About Me</h2>
         <p class="justify-text">
-            <strong>Mission Statement:</strong>
-            My goal is to bridge the gap between business fundamentals and emerging technology.
-            I pursue opportunities where financial analysis, AI automation, and entrepreneurial
-            thinking come together to create real, measurable value. I am committed to continuous
-            growth, building ventures that matter, and developing the skills to lead in a
-            data-driven world.
+            I'm an economics student at Brigham Young University with a focus on private equity,
+            AI-driven automation, and entrepreneurship. I've lived in Argentina for two years,
+            studied at the BYU Jerusalem Center, and built a revenue-generating app from the ground up.
+        </p>
+        <p class="justify-text">
+            I thrive at the intersection of business fundamentals and emerging technology &mdash; using
+            AI automation and data analysis to solve real problems and drive measurable results.
         </p>
 
-        <!-- Numbered sections matching the tutorial layout -->
-        <ol>
-            <!-- 1. Education -->
-            <li id="education"><strong>Education</strong>
-                <ul>
-                    <li>Brigham Young University &mdash; BS in Economics (GPA: 3.8, Expected April 2027)</li>
-                    <li>BYU Jerusalem Center for Near Eastern Studies &mdash; Study Abroad</li>
-                </ul>
-            </li>
+        <h2 id="experience">Experience</h2>
+        <div class="job">
+            <div class="job-header">
+                <span>Philo Ventures &mdash; <span class="highlight-role">Sourcing Analyst</span></span>
+                <span class="job-date">Nov 2025 &ndash; Present | Pleasant Grove, UT</span>
+            </div>
+            <ul>
+                <li>Evaluate business viability for private equity roll-up strategies by analyzing EBITDA, MOM revenue, and operational data.</li>
+                <li>Manage the CRM pipeline, categorizing leads to streamline cold outreach campaigns via LinkedIn, calls, and email.</li>
+                <li>Developed an automation for lead generation, cold contacting, and CRM management to increase outreach efficiency.</li>
+                <li>Conducted research to identify potential acquirable targets in regional real estate sectors.</li>
+            </ul>
+        </div>
 
-            <!-- 2. Experience -->
-            <li id="experience"><strong>Experience</strong>
-                <ul>
-                    <li>Philo Ventures &mdash; Sourcing Analyst</li>
-                    <li>Sandbox Startup Accelerator &mdash; Entrepreneur</li>
-                    <li>The Church of Jesus Christ of Latter-day Saints &mdash; Missionary (Argentina)</li>
-                </ul>
-            </li>
+        <div class="job">
+            <div class="job-header">
+                <span>Sandbox Startup Accelerator &mdash; <span class="highlight-role">Entrepreneur</span></span>
+                <span class="job-date">Apr 2025 &ndash; Present | Provo, UT</span>
+            </div>
+            <ul>
+                <li>Engineered and launched a revenue-generating AI-powered SaaS platform on the Apple App Store and Google Play.</li>
+                <li>Led syncs between technical development and marketing in a cross-functional team environment.</li>
+                <li>Iterated on AI features based on market research and user testing.</li>
+                <li>Executed targeted sales and market-entry strategies, securing early adopters through direct outreach and demos.</li>
+            </ul>
+        </div>
 
-            <!-- 3. Skills -->
-            <li id="skills"><strong>Skills</strong>
-                <ul>
-                    <li>Advanced Excel (VBA/Macros, Sensitivity Analysis, Data Tables)</li>
-                    <li>Prompt Engineering &amp; LLM Workflows</li>
-                    <li>AI Automation &amp; Lead Generation</li>
-                    <li>CRM Management &amp; Deal Flow Analysis</li>
-                    <li>MVP Development &amp; SaaS Launch</li>
-                    <li>Fluent Spanish, Elementary Portuguese</li>
-                </ul>
-            </li>
-        </ol>
+        <div class="job">
+            <div class="job-header">
+                <span>The Church of Jesus Christ of Latter-day Saints &mdash; <span class="highlight-role">Missionary</span></span>
+                <span class="job-date">Jul 2022 &ndash; May 2024 | Argentina</span>
+            </div>
+            <ul>
+                <li>Managed logistics, trainings, housing, and stipends for a 200+ member organization.</li>
+                <li>Delivered hundreds of instructional lessons in Spanish to diverse groups.</li>
+            </ul>
+        </div>
+
+        <h2 id="education" class="underline-text">Education</h2>
+        <p>
+            <strong>Brigham Young University</strong> &mdash; BS in Economics &bull; GPA: 3.8 &bull; Expected April 2027<br>
+            Study Abroad: BYU Jerusalem Center for Near Eastern Studies<br>
+            Associations: Private Equity &amp; Venture Capital, Product Management
+        </p>
+
+        <h2 id="skills">Skills &amp; Interests</h2>
+        <ul>
+            <li><strong>Technical:</strong> Advanced Excel (VBA/Macros, Sensitivity Analysis, Data Tables), Prompt Engineering, AI Automation, LLM Workflows, MVP Development</li>
+            <li><strong>Languages:</strong> Fluent Spanish, Elementary Portuguese</li>
+            <li><strong>Interests:</strong> Rock Climbing, Skiing, National Parks, Econometrics</li>
+        </ul>
 
         <a href="#top" class="back-to-top">&#8593; Back to top</a>
     </div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #282c34;
+            color: #61dafb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .game-container {
+            background-color: #20232a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        input[type="number"] {
+            padding: 10px;
+            width: 60%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #61dafb;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #61dafb;
+            color: #282c34;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background-color: #21a1c4; }
+        #message { margin-top: 20px; font-size: 1.2em; height: 1.5em; }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Number</h1>
+        <p>I'm thinking of a number between 1 and 100.</p>
+        <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100">
+        <br>
+        <button onclick="checkGuess()">Submit Guess</button>
+        <button onclick="resetGame()" style="display:none;" id="resetBtn">Play Again</button>
+        <p id="message"></p>
+        <br><br>
+        <a href="scratch.html" style="color:#61dafb;">&larr; Back to Scratch Page</a>
+    </div>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            const guess = parseInt(document.getElementById('guessInput').value);
+            const messageEl = document.getElementById('message');
+            if (isNaN(guess) || guess < 1 || guess > 100) return messageEl.textContent = "Please enter a valid number (1-100).";
+            
+            attempts++;
+            if (guess === randomNumber) { messageEl.textContent = `🎉 Correct in ${attempts} tries!`; messageEl.style.color = "#4caf50"; document.getElementById('resetBtn').style.display = "inline-block"; }
+            else { messageEl.textContent = guess > randomNumber ? "📉 Too high!" : "📈 Too low!"; messageEl.style.color = "#ff9800"; }
+        }
+        function resetGame() { randomNumber = Math.floor(Math.random() * 100) + 1; attempts = 0; document.getElementById('guessInput').value = ''; document.getElementById('message').textContent = ''; document.getElementById('resetBtn').style.display = "none"; }
+    </script>
+</body>
+</html>
