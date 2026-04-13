@@ -1,0 +1,151 @@
+/* =====================
+   GLOBAL STYLES (Tag Selectors)
+   ===================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* =====================
+   LINK STATES
+   ===================== */
+
+a {
+    color: maroon;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #6b0000;
+}
+
+/* =====================
+   NAVIGATION
+   ===================== */
+
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 20px;
+}
+
+nav a {
+    margin-right: 15px;
+}
+
+/* =====================
+   BOX MODEL - RESUME CONTAINER
+   The .resume-container uses all three layers of the box model:
+
+   - border: draws a visible line around the container so you can
+     see where the element's edge is.
+
+   - padding: space INSIDE the border, between the border and the
+     content. This keeps text from pressing against the edge.
+
+   - margin: space OUTSIDE the border, between the container and
+     the surrounding page. Setting auto on left/right centers the
+     container horizontally on the page.
+   ===================== */
+
+.resume-container {
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+}
+
+/* =====================
+   CUSTOM CLASS SELECTORS
+   ===================== */
+
+/* Applied to all <h2> tags */
+.bold-heading {
+    font-weight: bold;
+}
+
+/* Applied specifically to the Education heading */
+.underline-text {
+    text-decoration: underline;
+}
+
+/* Applied to the Professional Summary paragraph */
+.justify-text {
+    text-align: justify;
+}
+
+/* Applied via <span> to highlight a job title inline */
+.highlight-role {
+    color: maroon;
+    font-weight: bold;
+    font-size: 1.02em;
+}
+
+/* =====================
+   LISTS
+   ===================== */
+
+ul, ol {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+/* =====================
+   JOB ENTRY LAYOUT
+   ===================== */
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.job-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* =====================
+   BACK TO TOP LINK
+   ===================== */
+
+.back-to-top {
+    display: block;
+    margin-top: 300px;
+    font-size: 0.8em;
+    color: #999999;
+    text-align: left;
+}
+
+.back-to-top:hover {
+    color: maroon;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+
+footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    color: #666;
+    font-size: 0.9em;
+}

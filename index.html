@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aidan Madsen</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/layoutstyles.css">
+</head>
+<body>
+
+    <!-- =====================
+         HEADER
+         Profile image on the left, nav links floated to the right.
+    ===================== -->
+    <div class="common header">
+        <!-- Nav links pushed to the top-right via float: right -->
+        <span class="subheader">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="about.html">About Me</a>
+        </span>
+        <!-- Profile photo — replace profile.jpg with your actual image file -->
+        <img
+            src="images/profile.jpg"
+            alt="Photo of Aidan Madsen"
+            width="80"
+            height="80"
+        >
+    </div>
+
+    <!-- =====================
+         LEFT MENU
+         On-page anchor links that jump to sections in the main body.
+    ===================== -->
+    <div class="common left-menu">
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+    </div>
+
+    <!-- =====================
+         MAIN BODY
+         Mission statement at top, then numbered sections for
+         Education, Experience, and Skills.
+    ===================== -->
+    <div class="common main-body">
+        <a id="top"></a>
+
+        <!-- Mission Statement -->
+        <p class="justify-text">
+            <strong>Mission Statement:</strong>
+            My goal is to bridge the gap between business fundamentals and emerging technology.
+            I pursue opportunities where financial analysis, AI automation, and entrepreneurial
+            thinking come together to create real, measurable value. I am committed to continuous
+            growth, building ventures that matter, and developing the skills to lead in a
+            data-driven world.
+        </p>
+
+        <!-- Numbered sections matching the tutorial layout -->
+        <ol>
+            <!-- 1. Education -->
+            <li id="education"><strong>Education</strong>
+                <ul>
+                    <li>Brigham Young University &mdash; BS in Economics (GPA: 3.8, Expected April 2027)</li>
+                    <li>BYU Jerusalem Center for Near Eastern Studies &mdash; Study Abroad</li>
+                </ul>
+            </li>
+
+            <!-- 2. Experience -->
+            <li id="experience"><strong>Experience</strong>
+                <ul>
+                    <li>Philo Ventures &mdash; Sourcing Analyst</li>
+                    <li>Sandbox Startup Accelerator &mdash; Entrepreneur</li>
+                    <li>The Church of Jesus Christ of Latter-day Saints &mdash; Missionary (Argentina)</li>
+                </ul>
+            </li>
+
+            <!-- 3. Skills -->
+            <li id="skills"><strong>Skills</strong>
+                <ul>
+                    <li>Advanced Excel (VBA/Macros, Sensitivity Analysis, Data Tables)</li>
+                    <li>Prompt Engineering &amp; LLM Workflows</li>
+                    <li>AI Automation &amp; Lead Generation</li>
+                    <li>CRM Management &amp; Deal Flow Analysis</li>
+                    <li>MVP Development &amp; SaaS Launch</li>
+                    <li>Fluent Spanish, Elementary Portuguese</li>
+                </ul>
+            </li>
+        </ol>
+
+        <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+
+    <!-- =====================
+         RIGHT MENU
+         Name, title, location, and LinkedIn link.
+    ===================== -->
+    <div class="common right-menu">
+        <strong>Aidan Madsen</strong><br>
+        <br>
+        Sourcing Analyst<br>
+        &amp; Entrepreneur<br>
+        <br>
+        Provo, UT 84602<br>
+        <br>
+        <a href="https://www.linkedin.com/in/aidan-madsen" target="_blank">See my LinkedIn.</a>
+    </div>
+
+    <!-- =====================
+         FOOTER — fixed to bottom of viewport
+    ===================== -->
+    <div class="common footer">
+        &copy; Aidan Madsen
+    </div>
+
+</body>
+</html>
