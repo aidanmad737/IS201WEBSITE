@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Guessing Game</title>
+    <title>Guess the National Park</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -12,8 +12,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px 0;
         }
         .game-container {
             background-color: #20232a;
@@ -21,12 +22,19 @@
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
-            max-width: 400px;
-            width: 100%;
+            max-width: 500px;
+            width: 90%;
         }
-        input[type="number"] {
+        #parkImage {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 2px solid #61dafb;
+        }
+        input[type="text"] {
             padding: 10px;
-            width: 60%;
+            width: 70%;
             font-size: 16px;
             margin-bottom: 20px;
             border: 1px solid #61dafb;
@@ -43,6 +51,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            margin: 0 5px;
         }
         button:hover { background-color: #21a1c4; }
         #message { margin-top: 20px; font-size: 1.2em; height: 1.5em; }
@@ -50,31 +59,91 @@
 </head>
 <body>
     <div class="game-container">
-        <h1>Guess the Number</h1>
-        <p>I'm thinking of a number between 1 and 100.</p>
-        <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100">
+        <h1>Guess the National Park</h1>
+        
+        <img id="parkImage" src="" alt="Guess this National Park">
+        
+        <p>What is the name of this National Park?</p>
+        <input type="text" id="guessInput" placeholder="Enter park name...">
         <br>
-        <button onclick="checkGuess()">Submit Guess</button>
-        <button onclick="resetGame()" style="display:none;" id="resetBtn">Play Again</button>
+        <button onclick="checkGuess()" id="submitBtn">Submit Guess</button>
+        <button onclick="setupNewRound()" style="display:none;" id="nextBtn">Next Park</button>
+        
         <p id="message"></p>
         <br><br>
         <a href="scratch.html" style="color:#61dafb;">&larr; Back to Scratch Page</a>
     </div>
 
     <script>
-        let randomNumber = Math.floor(Math.random() * 100) + 1;
-        let attempts = 0;
+        const parks = [
+            { name: "Yosemite", imageUrl: "assets/park-yosemite.jpg" },
+            { name: "Zion", imageUrl: "assets/park-zion.jpg" },
+            { name: "Grand Canyon", imageUrl: "assets/park-grand-canyon.jpg" },
+            { name: "Yellowstone", imageUrl: "assets/park-yellowstone.jpg" },
+            { name: "Arches", imageUrl: "assets/park-arches.jpg" }
+        ];
+
+        let currentPark;
+
+        const parkImageEl = document.getElementById('parkImage');
+        const guessInputEl = document.getElementById('guessInput');
+        const messageEl = document.getElementById('message');
+        const submitBtn = document.getElementById('submitBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function setupNewRound() {
+            // Select a random park
+            const randomIndex = Math.floor(Math.random() * parks.length);
+            currentPark = parks[randomIndex];
+
+            // Update UI
+            parkImageEl.src = currentPark.imageUrl;
+            guessInputEl.value = '';
+            messageEl.textContent = '';
+            messageEl.style.color = "#61dafb"; // Reset color
+            
+            // Reset buttons
+            submitBtn.style.display = 'inline-block';
+            nextBtn.style.display = 'none';
+            guessInputEl.disabled = false;
+        }
 
         function checkGuess() {
-            const guess = parseInt(document.getElementById('guessInput').value);
-            const messageEl = document.getElementById('message');
-            if (isNaN(guess) || guess < 1 || guess > 100) return messageEl.textContent = "Please enter a valid number (1-100).";
-            
-            attempts++;
-            if (guess === randomNumber) { messageEl.textContent = `🎉 Correct in ${attempts} tries!`; messageEl.style.color = "#4caf50"; document.getElementById('resetBtn').style.display = "inline-block"; }
-            else { messageEl.textContent = guess > randomNumber ? "📉 Too high!" : "📈 Too low!"; messageEl.style.color = "#ff9800"; }
+            const userGuess = guessInputEl.value.trim().toLowerCase();
+            const correctName = currentPark.name.toLowerCase();
+
+            if (!userGuess) {
+                messageEl.textContent = "Please enter a guess.";
+                messageEl.style.color = "#ff9800";
+                return;
+            }
+
+            if (userGuess === correctName) {
+                messageEl.textContent = `🎉 Correct! It's ${currentPark.name} National Park.`;
+                messageEl.style.color = "#4caf50";
+                submitBtn.style.display = 'none';
+                nextBtn.style.display = 'inline-block';
+                guessInputEl.disabled = true;
+            } else {
+                messageEl.textContent = "❌ Incorrect. Try again!";
+                messageEl.style.color = "#ff9800";
+            }
         }
-        function resetGame() { randomNumber = Math.floor(Math.random() * 100) + 1; attempts = 0; document.getElementById('guessInput').value = ''; document.getElementById('message').textContent = ''; document.getElementById('resetBtn').style.display = "none"; }
+        
+        // Add event listener for 'Enter' key
+        guessInputEl.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                // Prevent form submission if it's in a form
+                event.preventDefault();
+                // Trigger the button element with a click
+                if(submitBtn.style.display !== 'none') {
+                    submitBtn.click();
+                }
+            }
+        });
+
+        // Initial setup when the page loads
+        window.onload = setupNewRound;
     </script>
 </body>
 </html>
