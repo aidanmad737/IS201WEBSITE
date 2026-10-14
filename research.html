@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="ECON 398 research paper on Texas H.B. 1540 and felony penalties for buying sex, using a synthetic control design." />
+        <meta name="author" content="Aidan Madsen" />
+        <title>Projects &mdash; Aidan Madsen</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Aidan Madsen</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Research Section-->
+            <section class="py-5">
+                <div class="container px-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Research</span></h1>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-11 col-xl-9 col-xxl-8">
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="text-primary fw-bolder small mb-2">ECON 398 Applied Econometrics &middot; with Carly Pope and Clara Eccles</div>
+                                    <h2 class="fw-bolder mb-4">How Does Raising the Punishment for Purchasing Prostitution to a Felony Level Affect Sex-Related Crime Rates?</h2>
+                                    <h3 class="h5 fw-bolder text-primary">The question</h3>
+                                    <p>In 2021, Texas passed H.B. 1540, which made buying sex a state jail felony. Selling sex stayed a Class B misdemeanor. We asked whether the tougher penalty on buyers changed the rate of reported sex-related offenses in Texas.</p>
+                                    <h3 class="h5 fw-bolder text-primary">The method</h3>
+                                    <p>We used a synthetic control design in Stata. We built a &ldquo;Synthetic Texas&rdquo; from Illinois, Montana, North Dakota, Oklahoma, Oregon, Washington, and Wisconsin, weighted to match Texas over 2013&ndash;2020, then compared the two after the law took effect. We left out New York and Maine (their own 2021 prostitution law changes), Nevada (prostitution is legal there), and states with incomplete reporting.</p>
+                                    <h3 class="h5 fw-bolder text-primary">The data</h3>
+                                    <p>FBI National Incident-Based Reporting System (NIBRS) data for 2013&ndash;2023, covering prostitution, human trafficking, forcible rape, and pornography/obscene material offenses. Because states recorded prostitution offenses inconsistently, we combined them into one aggregate prostitution count.</p>
+                                    <h3 class="h5 fw-bolder text-primary">What we found</h3>
+                                    <p>No statistically significant effect. Reported offenses dipped right after the law and then ticked back up. Texas did not stand out from the donor states in placebo comparisons, and the gap between Texas and Synthetic Texas was under ten offenses per 100,000 people. We suspect changes in what gets reported and prosecuted explain more of the movement than changes in behavior.</p>
+                                    <h3 class="h5 fw-bolder text-primary">Limits</h3>
+                                    <p>NIBRS only captures reported crime, so a market pushed further underground could look like a drop. Texas and Synthetic Texas diverged in 2020 and just before the law, and we only have a short window after it. A null result here does not prove the law changed nothing.</p>
+                                    <a class="btn btn-outline-dark btn-sm" href="projects.html">&larr; Back to Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Call to action section-->
+            <section class="py-5 bg-gradient-primary-to-secondary text-white">
+                <div class="container px-5 my-5">
+                    <div class="text-center">
+                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Copyright &copy; Aidan Madsen 2026</div></div>
+                    <div class="col-auto">
+                        <a class="small" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
